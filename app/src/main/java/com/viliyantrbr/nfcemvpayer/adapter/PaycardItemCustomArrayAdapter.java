@@ -71,10 +71,17 @@ public class PaycardItemCustomArrayAdapter extends ArrayAdapter<PaycardObject> {
         if (paycardObject != null) {
             // PAN
             byte[] applicationPan = paycardObject.getApplicationPan();
-
-            String applicationPanHexadecimal = HexUtil.bytesToHexadecimal(applicationPan);
+            // may give an error
+            //String applicationPanHexadecimal = HexUtil.bytesToHexadecimal(applicationPan);
+            String applicationPanHexadecimal = "";
+            if (applicationPan != null) {
+                applicationPanHexadecimal = HexUtil.bytesToHexadecimal(applicationPan);
+            } else {
+                applicationPanHexadecimal = "null";
+            }
 
             String panPreview = null; // Hide the last 4 characters (digits) from the preview (which are part from the unique ones) because of safety reasons
+
             if (applicationPanHexadecimal != null) {
                 if (applicationPanHexadecimal.length() > (16 / 4)) {
                     panPreview = applicationPanHexadecimal.substring(0, applicationPanHexadecimal.length() - (16 / 4));

@@ -1,6 +1,14 @@
 # NFC-EMV-Reader
 Android Java written application which reads and extracts contactless EMV paycard data using NFC and stores it into a Realm database.
 
+org Source: https://github.com/n37sn4k3/NFC-EMV-Reader
+
+new source (Gradle 4.6): https://github.com/MichaelsPlayground/NFC-EMV-Reader
+
+zusätzlich: com.android.tools.build:gradle:3.2.0
+
+Achtung: Versionsstand ist sehr alt, aber die App kann zumindest eine MasterCard einlesen
+
 ## Get application from Google Play
 <a href="https://play.google.com/store/apps/details?id=com.pxdworks.nfcemvreader" target="_blank">
     <img src="https://i.imgur.com/SodCdkm.png" height=60" />

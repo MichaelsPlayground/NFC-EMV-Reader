@@ -619,6 +619,10 @@ public class PaycardActivity extends AppCompatActivity {
 
         TextView logContentTextView = findViewById(R.id.content_log_content);
         logContentTextView.setText(logContent.toString());
+        // new from MichaelsPlayground to get the data
+        System.out.println("*** logContent start ***");
+        System.out.println(logContent);
+        System.out.println("*** logContent end ***");
     }
 
     @Override
